@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+		<title>Calificaciones</title>
+		<script type="text/javascript">  
+		
+		//cuando introduzco el valor 5, sale aprobado, notabla, sobresaliente y valor erroneo
+		//cuando introduzco el valor 9 sale valor erroneo, el por defecto
+		//cuando introduzco el valor 2 sale valor erroneo, el por defecto
+		/*Procedo ahora a comentar los errores y luego a arreglar el programa: En el switch los case se comparan directamente con un elemento, no puedes ponerle <>, tienes que igualarlo a algo =,
+		luego, faltan los break, al final de cada case, para que así si entra en algun case, de la respuesta y se salga
+		directamente del swith, si no colocas los break, va a recorrer todos los case desde donde empieces,
+		es decir, si entras en el case 6, mostrará aprobado y luego notable etc..
+		luego, faltan por definir las notas 0,1,2,3,4,5,7,9,10
+		*/
+		function verCalificacion(nota){
+			nota = parseInt(nota);
+			switch(nota){
+				case 0:
+					console.log('Suspenso');
+					alert('Suspenso');
+					break;
+				case 1:
+					console.log('Suspenso');
+					alert('Suspenso');
+					break;
+				case 2:
+					console.log('Suspenso');
+					alert('Suspenso');
+					break;
+				case 3:
+					console.log('Suspenso');
+					alert('Suspenso');
+					break;
+				case 4:
+					console.log('Suspenso');
+					alert('Suspenso');
+					break;
+				case 5:
+					console.log('Aprobado');
+					alert('Aprobado');
+					break;
+				case 6:
+					console.log('Aprobado');
+					alert('Aprobado');
+					break;
+				case 7:
+					console.log('Notable');
+					alert('Notable');
+					break;
+				case 8:
+					console.log('Notable');
+					alert('Notable');
+					break;
+				case 9:
+					console.log('Sobresaliente');
+					alert('Sobresaliente');
+					break;
+				case 10:
+					console.log('Sobresaliente');
+					alert('Sobresaliente');	
+					break;
+				default:
+					console.log('Valor erroneo');
+					alert('Valor erroneo');
+			}
+		}
+		</script> 
+	</head>
+	<body>
+		<span> Ver resultado</span>
+		<br/>
+		<input type= "text" id= 'txtnota' value="5"/>
+		<br/>
+		<input type="button" onclick = "verCalificacion(document.getElementById('txtnota').value);" value = 'Pulsar'>
+	</body> 
+</html>
