@@ -4,21 +4,30 @@ if(psw.length>=8 && psw.length<=16){
     alert("Tiene entre 8 y 16 caracteres.");
     contadorRequisitos++;
 }
-
+if(psw.toUpperCase() != psw){
+    alert("Tiene una letra minúscula."); 
+    contadorRequisitos++;
+}
+if(psw.toLowerCase()!=psw){
+    alert("Tiene una letra mayúscula."); 
+    contadorRequisitos++;
+}
+/*
 for (const i in psw) {
-    if(psw[i] == psw[i].toLowerCase()){
+    if(psw.charAt(i) === psw.charAt(i).toLowerCase()){
         alert("Tiene una letra minúscula.");    
         contadorRequisitos++;
         break;
     }
 }
 for (const i in psw) {
-    if(psw[i] == psw[i].toUpperCase()){
+    if(psw.charAt(i) === psw.charAt(i).toUpperCase()){
         alert("Tiene una letra mayúscula.");    
         contadorRequisitos++;
         break;
     }
 }
+*/
 for (const i in psw) {
     if(psw[i] == "1" || psw[i] == "2" || psw[i] == "3" || psw[i] == "4"  || psw[i] == "5" || psw[i] == "6" || psw[i] == "7" || psw[i] == "8" || psw[i] == "9" || psw[i] == "0"){
         alert("Tiene un número.");
