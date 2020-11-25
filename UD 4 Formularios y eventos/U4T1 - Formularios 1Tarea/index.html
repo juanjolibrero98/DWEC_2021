@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U4T1-Formularios1</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <!-- action="register.php" method="post" -->
+    <form >
+        <ul>
+         <li>
+           <label for="name">Nombre del disco</label>
+           <input type="text" id="name" name="user_name"placeholder="Ingresa el nombre del disco" required>
+         </li>
+         <li>
+           <label for="grupo">Grupo de música o cantante</label>
+           <input type="text" id="grupo" name="grupo" placeholder="Ingrese el nombre del Grupo de música" required>
+         </li>
+         <li>
+            <label for="anho">Año de publicación</label>
+            <input type="number" id="anho" name="anho" required></input>
+        </li>
+        <li>
+            <label for="tipoMusica">Tipo de Música</label>
+            <select name="tipoMusica" id="tipoMusica">
+                <option value="rock">rock</option> 
+                <option value="pop">pop</option> 
+                <option value="punk">punk</option>
+                <option value="indie">indie</option> 
+             </select>
+        </li>  
+        <li>
+            <label for="nEstanteria">Número de estantería</label>
+            <input type="number" id="nEstanteria" name="nEstanteria" required></input>
+        </li>
+        <li>
+            <label for="presta">Prestado</label>
+            <input type="radio" name="presta" id="presta" value="true">true
+            <input type="radio" name="presta" id="presta" value="false" checked> false
+        </li>
+        <input onclick="guardarDatos()" type="submit" value="Enviar">
+        </ul>
+       </form>
+</body>
+</html>
