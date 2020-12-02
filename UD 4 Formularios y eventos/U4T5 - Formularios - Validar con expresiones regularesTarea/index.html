@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+     <!-- action="register.php" method="post" -->
+    <form id="miFormulario">
+        <ul>
+            <li>
+                <label id="fecha2" for="name">Fecha de creación</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </li>
+            <li>
+                <label id="cocinero2" for="grupo">Cocinero</label>
+                <input type="text" id="cocinero" name="Cocinero" placeholder="Ingrese el nombre del Cocinero" value="WW$1234" required>
+            </li>
+            <li>
+                <label id="destinatario2" for="anho">Destinatario</label>
+                <input type="text" id="destinatario" name="destinatario" value="NM_alburquerque:1234" required></input>
+            </li>
+            <li>
+                <label id="gramos2" for="anho">Gramos</label>
+                <input type="text" id="gramos" name="gramos" value="300" required></input>
+            </li>
+            <li>
+                <label id="composicion2" for="anho">Composición</label>
+                <input type="text" id="composicion" name="composicion" value="200gC3OH7" required></input>
+            </li>
+            <li>
+                <label id="cuentaEEUU2" for="anho">Nº Cuenta EEUU</label>
+                <input type="text" id="cuentaEEUU" name="cuentaEEUU" value="ab03-111111111111-11" required></input>
+                <input type="text" id="solucCuenta" name="solucCuenta" readonly></input>
+            </li>
+            <!--onclick="guardarDatos()"-->
+            <input type="submit" value="Enviar" id="enviar" />
+        </ul>
+    </form>
+</body>
+</html>
