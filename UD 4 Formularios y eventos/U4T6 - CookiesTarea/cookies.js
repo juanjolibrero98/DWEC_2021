@@ -1,13 +1,14 @@
 window.onload = iniciar;
 //creo la cookie contador
 document.cookie = "Contador = 0;";
-
+let contadorCookie=0;
 function iniciar() {
     document.getElementById("enviar").addEventListener("click",validar, false);
-    //añado la cookie al input
-    document.getElementById("cookie").value = document.cookie
     //reiniciar cookie
     document.getElementById("reiniciar_cookie").addEventListener("click",reiniciar, false);
+    //añado la cookie al input
+    document.getElementById("cookie").value = document.cookie;
+    
 }
 /*
 function validarFecha() {
@@ -168,10 +169,8 @@ function validar(e){
     ){
        return true;
     }else{
-        let contadorCookie=1;
-        document.cookie = "Contador = "+contadorCookie+" ;";
-        contadorCookie++;
-        ;
+        document.cookie = "Contador = "+(++contadorCookie)+" ;";
+        document.getElementById("cookie").value = document.cookie;
         e.preventDefault();
         return false;
     }
@@ -179,4 +178,5 @@ function validar(e){
 
 function reiniciar(){
     document.cookie = "Contador = 0 ;";
+    document.getElementById("cookie").value = document.cookie;
 }
