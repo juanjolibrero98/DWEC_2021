@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kill Team</title>
+    <style>
+        .error{
+            border: 5px solid red;
+        }
+        .okey{
+            border: 5px solid green;
+        }
+        #errores{
+            float: left;
+            background:#FF6633;
+            width: 400px;
+        }
+        #ultima_Tirada{
+            float: left;
+            background:#CCFF33;
+            width: 400px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Introduce tu nombre" required>
+        <br>
+
+        <label for="anho">Año</label>
+        <input id="anho" name="anho" type="text" placeholder="Introduce el año" required>
+        <br>
+
+        <label for="habilidad">Habilidades</label>
+        <input id="habilidad" name="habilidad" type="text" placeholder="Introduce las habilidades" required>
+        <br>
+
+        <label for="herir">Tirada para herir</label>
+        <input id="herir" name="herir" type="text" placeholder="Tirada para herir" required>
+        <br>
+
+        <label for="rol">Elige el Rol</label>
+        <select name="rol" id="rol" required>
+            <option value="0" selected="selected">Seleccione Rol</option>
+            <option value="1">Líder</option>
+            <option value="2">Combate</option>
+            <option value="3">Comunicaciones</option>
+            <option value="4">Demoliciones</option>
+            <option value="5">Fanático</option>
+        </select>
+        <br>
+
+        <label for="psw">Passwords</label>
+        <input type="password" id="psw" name="psw" placeholder="Introduce la contraseña" required>
+        <br>
+
+        <button type="submit" id="enviar" name="enviar">Enviar</button>
+        <button type="reset" id="resetear" name="resetear">Reset</button>
+    </form>
+    <div id="errores"></div>
+    <br><br>
+    <div id="ultima_Tirada"></div>
+</body>
+</html>
