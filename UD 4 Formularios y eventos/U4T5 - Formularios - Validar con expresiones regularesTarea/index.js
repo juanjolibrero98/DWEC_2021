@@ -19,8 +19,8 @@ function validarCocinero() {
     /*Cocinero: será un nombre en clave formado por 
     dos letras en mayúscula, 
     un  símbolo y cuatro dígitos (ej. WW$1234)*/
-   // let regexCocinero = new RegExp("/^([A-Z]{2})(\W{1})(\d{4})$/");
-    if(/^([A-Z]{2})(\W{1})(\d{4})$/.test(cocinero)){
+   let regexCocinero = new RegExp(/^([A-Z]{2})(\W{1})(\d{4})$/);
+    if(regexCocinero.test(cocinero)){
         return true;
     }else{
         alert("COCINERO: Tiene que tener 2 Mayusculas, 1 Simbolo y 4 Números");
