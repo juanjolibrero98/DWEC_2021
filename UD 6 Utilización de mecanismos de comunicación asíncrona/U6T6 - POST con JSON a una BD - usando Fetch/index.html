@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="serie.js"></script>
+    <style>
+        .contenedor{
+            width: 80%;
+            margin: 10px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .izquierda{
+            width: 47.5%;
+        }
+        .derecha{
+            width: 47.5%;
+        }
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="izquierda">
+            <h1>Create Serie</h1>
+            <label for="titulo">Título de la serie</label>
+            <input type="text" id="titulo" name="titulo" required>
+            <br>
+            <label for="director">Director</label>
+            <input type="text" id="director" name="director" required>
+            <br>
+            <label for="cadena">Cadena</label>
+            <input type="text" id="cadena" name="cadena" required>
+            <br>
+            <label for="anho">Años</label>
+            <input type="text" id="anho" name="anho" required>
+            <br>
+            <label for="terminada">Terminada</label>
+            <input type="radio" id="terminada" name="terminada" value="true">SI
+            <input type="radio" id="terminada" name="terminada" value="false">NO
+            <br>
+            <button id="enviar">Enviar</button>
+
+            <div id="resultado"></div>
+        </div>
+        <div class="derecha" id="mostrarSeries">
+            <table id="tabla"></table>
+        </div>
+    </div>
+</body>
+</html>
