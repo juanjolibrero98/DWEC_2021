@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SERIES>
+  <SERIE>
+    <TITULO>The Flash</TITULO>
+    <CADENA>HBO</CADENA>
+    <DIRECTOR>Glen Winter</DIRECTOR> 
+    <ANHO>2014</ANHO>
+    <TERMINADA>NO</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>The Blacklist</TITULO>
+    <CADENA>Netflix</CADENA>
+    <DIRECTOR>Raymond Reddington</DIRECTOR>
+    <ANHO>2013</ANHO>
+    <TERMINADA>SI</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>The Big bang Theory</TITULO>
+    <CADENA>Netflix</CADENA>
+    <DIRECTOR>Bill Padry</DIRECTOR>
+    <ANHO>2007</ANHO>
+    <TERMINADA>NO</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>Cobra Kai</TITULO>
+    <CADENA>Netflix</CADENA>
+    <DIRECTOR>Johnny Xolo</DIRECTOR>
+    <ANHO>2018</ANHO>
+    <TERMINADA>NO</TERMINADA>
+  </SERIE>
+  <SERIE>
+    <TITULO>Prision Break</TITULO>
+    <CADENA>Netflix</CADENA>
+    <DIRECTOR>Wentworth Domici</DIRECTOR>
+    <ANHO>1999</ANHO>
+    <TERMINADA>SI</TERMINADA>
+  </SERIE>
+</SERIES>
