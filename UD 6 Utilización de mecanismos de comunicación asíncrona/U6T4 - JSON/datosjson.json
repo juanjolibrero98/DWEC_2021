@@ -1,0 +1,37 @@
+[
+    {
+      "TITULO": "The Flash",
+      "CADENA": "HBO",
+      "DIRECTOR": "Glen Winter",
+      "ANYO": "2014",
+      "TERMINADA": "NO"
+    },
+    {
+      "TITULO": "The Blacklist",
+      "CADENA": "Netflix",
+      "DIRECTOR": "Raymond Reddington",
+      "ANYO": "2013",
+      "TERMINADA": "SI"
+    },
+    {
+      "TITULO": "The Big bang Theory",
+      "CADENA": "Netflix",
+      "DIRECTOR": "Bill Padry",
+      "ANYO": "2007",
+      "TERMINADA": "NO"
+    },
+    {
+        "TITULO": "Cobra Kai",
+        "CADENA": "Netflix",
+        "DIRECTOR": "Johnny Xolo",
+        "ANYO": "2018",
+        "TERMINADA": "NO"
+    },
+    {
+        "TITULO": "Prision Break",
+        "CADENA": "Netflix",
+        "DIRECTOR": "Wentworth Domici",
+        "ANYO": "1999",
+        "TERMINADA": "SI"
+    }
+  ]
