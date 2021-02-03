@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td {
+            padding: 5px;
+        }
+        .hidden{
+            display: none;
+        }
+        .aliados{
+            background-color: red;
+        }
+        .ejes{
+            background-color: green;
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <button id="mostrarXHR">MostrarXHR</button>
+    <button id="mostrarFetch">MostrarFetch</button>
+    <select name="bando" id="bando">
+        <option value="aliados">Aliados</option> 
+        <option value="eje">Eje</option> 
+        <option selected="yes" value="porDefecto">Por defecto</option>
+     </select>
+  
+    <table id="tabla"></table>
+</body>
+</html>
