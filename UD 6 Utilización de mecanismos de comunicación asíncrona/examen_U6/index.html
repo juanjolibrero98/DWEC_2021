@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <style>
+        table,tr,td {
+            border: 1px solid black;
+           border-collapse: collapse;
+       }
+       tr,td {
+           padding: 5px;
+       }
+       .table{
+           background-color: rgb(76, 231, 37);
+           color: white;
+       }
+   </style>
+</head>
+<body>
+    <label for="comunidades">CC.AA.:</label>
+    <select name="comunidades" id="comunidades">
+    </select>
+    
+    <label for="dEntregadas">D.Entregadas:</label>
+    <input type="number" name="dEntregadas" id="dEntregadas">
+
+    <label for="dAdmin">D.Admin:</label>
+    <input type="number" name="dAdmin" id="dAdmin">
+
+    <label for="dCompleta">D.Completa:</label>
+    <input type="number" name="dCompleta" id="dCompleta">
+
+    <label for="pEntregadas">D.Completa:</label>
+    <input type="number" name="pEntregadas" id="pEntregadas">
+
+    <label for="pAdmin">D.Completa:</label>
+    <input type="number" name="pAdmin" id="pAdmin">
+
+    <label for="pCompleta">D.Completa:</label>
+    <input type="number" name="pCompleta" id="pCompleta">
+
+    <button id="modificar">Modificar datos</button>
+
+    <hr>
+    Resultados
+    <div id="peticion"></div>
+    <hr>
+    <h1>Tabla de vacunacion</h1>
+    <button id="vacunaXHR">Cargar datos vacunación (XMLHttpRequest)</button>
+    <button id="vacunaFecth">Cargar datos vacunación (Fetch)</button>
+    <table id="tabla"></table>
+</body>
+</html>
