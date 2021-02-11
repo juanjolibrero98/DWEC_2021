@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Web Storage API</title>
+        <style>
+            #cajaformulario{
+                float: left;
+                padding: 20px;
+                border: 1px solid #999999;
+            }
+            #cajadatos{
+                float: left;
+                width: 400px;
+                margin-left: 20px;
+                padding: 20px;
+                border: 1px solid #999999;
+            }
+            #clave, #texto{
+            width: 200px;
+            }
+            #cajadatos > div{
+                padding: 5px;
+                border-bottom: 1px solid #999999;
+            }
+        </style>
+        <script>
+            /*Ejemplo 1
+            function iniciar(){
+                var boton=document.getElementById('grabar');
+                boton.addEventListener('click', nuevoitem, false);
+            }
+            function nuevoitem(){
+                var clave=document.getElementById('clave').value;
+                var valor=document.getElementById('texto').value;
+                sessionStorage.setItem(clave,valor);//sessionStorage[clave]=valor;
+                mostrar(clave);
+            }
+            function mostrar(clave){
+                var cajadatos=document.getElementById('cajadatos');
+                var valor=sessionStorage.getItem(clave);//var valor=sessionStorage[clave];
+                cajadatos.innerHTML='<div>'+clave+' - '+valor+'</div>';
+            }
+            window.addEventListener('load', iniciar, false);
+            */
+
+            /*Ejemplo 2*/
+            function iniciar(){
+                    var boton=document.getElementById('grabar');
+                    boton.addEventListener('click', nuevoitem, false);
+                    mostrar();
+            }
+            function nuevoitem(){
+                var clave=document.getElementById('clave').value;
+                var valor=document.getElementById('texto').value;
+                sessionStorage.setItem(clave,valor);
+                mostrar();
+                document.getElementById('clave').value='';
+                document.getElementById('texto').value='';
+            }
+            function mostrar(){
+                var cajadatos=document.getElementById('cajadatos');
+                cajadatos.innerHTML= "<div><button onclick='eliminarTodo()'>Eliminar Todo</button></div>";
+                for(var f=0;f<sessionStorage.length;f++){
+                    var clave=sessionStorage.key(f);
+                    var valor=sessionStorage.getItem(clave);
+                    cajadatos.innerHTML+='<div>'+clave+' - '+valor+'<br><button onclick="eliminar(\''+clave+'\')">Eliminar</button></div>';
+                }
+            }
+            function eliminar(clave){
+                if(confirm('Está Seguro?')){
+                    sessionStorage.removeItem(clave);
+                    mostrar();
+                }
+            }
+            function eliminarTodo(){
+                if(confirm('Está Seguro?')){
+                    sessionStorage.clear();
+                    mostrar();
+                }
+            }
+            window.addEventListener('load', iniciar, false);
+
+            /*Ejemplo 3 
+                function iniciar(){
+                    var boton=document.getElementById('grabar');
+                    boton.addEventListener('click', nuevoitem, false);
+                    window.addEventListener("storage", mostrar, false);
+                    mostrar();
+                }
+                function nuevoitem(){
+                    var clave=document.getElementById('clave').value;
+                    var valor=document.getElementById('texto').value;
+                    localStorage.setItem(clave,valor);
+                    mostrar();
+                    document.getElementById('clave').value='';
+                    document.getElementById('texto').value='';
+                }
+                function mostrar(){
+                    var cajadatos=document.getElementById('cajadatos');
+                    cajadatos.innerHTML='';
+                    for(var f=0;f<localStorage.length;f++){
+                        var clave=localStorage.key(f);
+                        var valor=localStorage.getItem(clave);
+                        cajadatos.innerHTML+='<div>'+clave+' - '+valor+'</div>';
+                    }
+                }
+                window.addEventListener('load', iniciar, false);
+            */
+        </script>
+    </head>
+    <body>
+        <section id="cajaformulario">
+            <form name="formulario">
+                <p>Clave:<br><input type="text" name="clave" id="clave"></p>
+                <p>Valor:<br><textarea name="text" id="texto"></textarea></p>
+                <p><input type="button" name="grabar" id="grabar" value="Grabar"></p>
+            </form>
+        </section>
+        <section id="cajadatos">
+            No hay información disponible
+        </section>
+    </body>
+</html>
