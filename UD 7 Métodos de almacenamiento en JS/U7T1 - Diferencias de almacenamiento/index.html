@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor2{
+            display: flex;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .izq{
+            margin-right: 50px;
+        }
+    </style>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <label for="select">AREA DE ALMACENAMIENTO</label>
+    <select id="select">
+        <option value="local" selected="selected">LOCAL</option>
+        <option value="session">SESSION</option>
+    </select>
+    <br>
+    <br>
+    <label for="key">CLAVE:</label>
+    <input type="text" name="key" id="key" placeholder="Introduce Clave" required>
+    <br>
+    <br>
+    <label for="value">VALOR:</label>
+    <input type="text" name="value" id="value" placeholder="Introduce Valor" required>
+    <br>
+    <br>
+    <button id="guardar">GUARDAR</button>
+    <button id="borrar">ELIMINAR</button>
+    <button id="actualizar">REFRESCAR</button>
+    <button id="comprobar">COMPROBAR COMPATIBILIDAD DEL NAVEGADOR</button>
+
+    <div class="contenedor2">
+        <div class="izq">
+            <label for="localText">CLAVES Y VALORES EN LOCAL STORAGE:</label>
+            <br>
+            <textarea name="textarea" rows="10" cols="50" id="localText"></textarea>
+        </div>
+        <div class="der">
+            <label for="sessionText">CLAVES Y VALORES EN SESSION STORAGE:</label>
+            <br>
+            <textarea name="textarea" rows="10" cols="50" id="sessionText"></textarea>
+        </div>
+    </div>    
+    <div id="resultado"></div>
+</body>
+</html>
